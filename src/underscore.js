@@ -3,13 +3,25 @@ var myFunctions = {
   // Return an array of the first n elements of an array. If n is undefined,
   // return just the first element.
   first: function(array, n) {
-
+    if (n !== undefined) {
+      for (var i = 0; i < array[n-1]; i++) {
+        return array[i];
+      }
+    }
+    else return array[0];
   },
+
 
   // Like first, but for the last elements. If n is undefined, return just the
   // last element.
   last: function(array, n) {
-
+    if (n !== undefined) {
+      for (var i = array.length-1; i < array[n-1]; i--) {
+        return array[i];
+      }
+    }
+    else return array[array.length-1];
+  },
   },
 
   // Produce a duplicate-free version of the array.
